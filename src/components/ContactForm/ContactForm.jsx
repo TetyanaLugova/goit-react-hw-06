@@ -9,8 +9,9 @@ import { addContact } from "../../redux/contactsSlice";
 export const ContactForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (values, actions) => {
     dispatch(addContact(values.name, values.number));
+    actions.resetForm();
   };
 
   const nameFieldId = useId();

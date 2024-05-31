@@ -16,7 +16,7 @@ export const SearchBox = () => {
       <input
         className={css.filter}
         type="text"
-        value={filter.name}
+        value={filter}
         onChange={handleChange}
       />
     </>
